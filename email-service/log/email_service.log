@@ -1,0 +1,587 @@
+2022-12-14 10:58:55.161  INFO 173064 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 10:58:55.166  INFO 173064 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-12-14 10:58:55.166  WARN 173064 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/email-service/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2022-12-14 10:58:55.169  INFO 173064 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 10:58:55.180  INFO 173064 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 10:58:55.180  INFO 173064 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-12-14 10:58:55.180  WARN 173064 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7e094740 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/email-service/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2022-12-14 10:58:55.872  INFO 173064 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=568a6e67-7916-35a9-b1dc-4c373c3b6424
+2022-12-14 10:58:56.122  INFO 173064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-14 10:58:56.132  INFO 173064 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 10:58:56.133  INFO 173064 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 10:58:56.260  INFO 173064 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 10:58:56.261  INFO 173064 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
+2022-12-14 10:58:56.469  WARN 173064 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumer': Unsatisfied dependency expressed through field 'emailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailServiceImpl': Unsatisfied dependency expressed through field 'emailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-14 10:58:56.471  INFO 173064 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-14 10:58:56.492  INFO 173064 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-14 10:58:56.513 ERROR 173064 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field emailSender in com.stackroute.emailservice.service.EmailServiceImpl required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2022-12-14 10:59:21.355  INFO 173204 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 10:59:21.361  INFO 173204 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-12-14 10:59:21.362  WARN 173204 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/email-service/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2022-12-14 10:59:21.366  INFO 173204 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 10:59:21.381  INFO 173204 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 10:59:21.381  INFO 173204 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-12-14 10:59:21.381  WARN 173204 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7e094740 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/email-service/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2022-12-14 10:59:22.172  INFO 173204 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=568a6e67-7916-35a9-b1dc-4c373c3b6424
+2022-12-14 10:59:22.375  INFO 173204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-14 10:59:22.387  INFO 173204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 10:59:22.388  INFO 173204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 10:59:22.482  INFO 173204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 10:59:22.482  INFO 173204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2022-12-14 10:59:22.670  WARN 173204 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumer': Unsatisfied dependency expressed through field 'emailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailServiceImpl': Unsatisfied dependency expressed through field 'emailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-14 10:59:22.673  INFO 173204 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-14 10:59:22.697  INFO 173204 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-14 10:59:22.721 ERROR 173204 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field emailSender in com.stackroute.emailservice.service.EmailServiceImpl required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2022-12-14 11:00:18.728  INFO 173690 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 11:00:19.525  INFO 173690 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 11:00:19.526  INFO 173690 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 11:00:19.545  INFO 173690 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 11:00:19.561  INFO 173690 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 11:00:19.561  INFO 173690 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 11:00:20.277  INFO 173690 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 11:00:20.521  INFO 173690 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 11:00:20.530  INFO 173690 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 11:00:20.530  INFO 173690 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 11:00:20.655  INFO 173690 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 11:00:20.656  INFO 173690 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1094 ms
+2022-12-14 11:00:22.259  INFO 173690 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 11:00:22.319  INFO 173690 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 11:00:22.385  INFO 173690 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 11:00:22.421  INFO 173690 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52226]
+2022-12-14 11:00:22.426  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.427  INFO 173690 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 11:00:22.555  INFO 173690 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 5.965 seconds (JVM running for 6.32)
+<<<<<<< HEAD
+2022-12-14 14:22:50.103  INFO 226950 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 14:22:50.917  INFO 226950 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:22:50.918  INFO 226950 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 14:22:50.930  INFO 226950 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 14:22:50.940  INFO 226950 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 14:22:50.940  INFO 226950 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:22:51.474  INFO 226950 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 14:22:51.625  INFO 226950 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 14:22:51.631  INFO 226950 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 14:22:51.631  INFO 226950 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 14:22:51.696  INFO 226950 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 14:22:51.696  INFO 226950 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 755 ms
+2022-12-14 14:22:52.786  INFO 226950 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 14:22:52.853  INFO 226950 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 14:22:52.859  INFO 226950 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 14:22:52.894  INFO 226950 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#733534f9:0/SimpleConnection@65a48cab [delegate=amqp://guest@127.0.0.1:5672/, localPort= 35752]
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.898  INFO 226950 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:22:52.977  INFO 226950 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 4.716 seconds (JVM running for 4.985)
+2022-12-14 14:26:49.098  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In otpMail method: email sent successfully...
+2022-12-14 14:27:14.090  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In welcome mail method: email sent successfully...
+2022-12-14 14:29:06.285  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-1] c.s.e.s.EmailHotelPropertyServiceImpl    : From EmailHotelPropertyServiceImpl--> In newHotelMail method: email sent successfully...
+2022-12-14 14:30:04.837  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In bookingMail method: email sent successfully...
+2022-12-14 14:37:00.174  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.176  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:00.182  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.205  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.225  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.227  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.232  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.233  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.233  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.237  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:37:00.337  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:00.875  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.047  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.047  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.047  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.048  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.051  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.146  INFO 226950 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.160  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.161  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.161  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:37:01.161  INFO 226950 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+=======
+2022-12-14 14:26:40.161  INFO 199047 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 14:26:41.108  INFO 199047 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:26:41.109  INFO 199047 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 14:26:41.119  INFO 199047 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 14:26:41.126  INFO 199047 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 14:26:41.127  INFO 199047 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:26:41.695  INFO 199047 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 14:26:41.869  INFO 199047 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 14:26:41.875  INFO 199047 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 14:26:41.875  INFO 199047 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 14:26:41.946  INFO 199047 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 14:26:41.946  INFO 199047 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 819 ms
+2022-12-14 14:26:42.811  INFO 199047 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 14:26:42.852  INFO 199047 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 14:26:42.861  INFO 199047 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 14:26:42.884  INFO 199047 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 33144]
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.887  INFO 199047 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:26:42.962  INFO 199047 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 5.027 seconds (JVM running for 5.264)
+2022-12-14 14:26:52.761  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.762  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.762  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.763  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.763  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.763  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.764  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.764  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.764  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:26:52.917  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.917  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.919  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.921  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.922  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.924  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.926  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.929  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.931  INFO 199047 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.939  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.940  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:52.940  INFO 199047 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:26:58.345  INFO 199285 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 14:27:00.491  INFO 199285 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:27:00.492  INFO 199285 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 14:27:00.505  INFO 199285 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 14:27:00.515  INFO 199285 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 14:27:00.515  INFO 199285 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:27:01.069  INFO 199285 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 14:27:01.289  INFO 199285 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 14:27:01.295  INFO 199285 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 14:27:01.295  INFO 199285 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 14:27:01.357  INFO 199285 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 14:27:01.358  INFO 199285 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 842 ms
+2022-12-14 14:27:02.306  INFO 199285 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 14:27:02.348  INFO 199285 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 14:27:02.352  INFO 199285 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 14:27:02.392  INFO 199285 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#beabd6b:0/SimpleConnection@77e9dca8 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 33172]
+2022-12-14 14:27:02.396  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.397  INFO 199285 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:27:02.456  INFO 199285 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 8.692 seconds (JVM running for 8.933)
+2022-12-14 14:27:07.957  INFO 199285 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 14:27:07.957  INFO 199285 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 14:27:07.958  INFO 199285 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 14:27:08.296  INFO 199285 --- [http-nio-9006-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 187 ms
+2022-12-14 14:28:39.717  INFO 199285 --- [http-nio-9006-exec-1] c.s.e.s.EmailHotelPropertyServiceImpl    : From EmailHotelPropertyServiceImpl--> In newHotelMail method: email sent successfully...
+2022-12-14 14:34:12.166  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.167  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.167  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.168  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.168  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.168  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.169  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.169  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.169  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.511  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.512  INFO 199285 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:34:12.521  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.521  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.521  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.521  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.521  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.522  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.522  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.522  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:12.522  INFO 199285 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:34:15.919  INFO 200540 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 14:34:16.808  INFO 200540 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:34:16.808  INFO 200540 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 14:34:16.819  INFO 200540 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 14:34:16.826  INFO 200540 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 14:34:16.827  INFO 200540 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:34:17.302  INFO 200540 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 14:34:17.438  INFO 200540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 14:34:17.443  INFO 200540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 14:34:17.444  INFO 200540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 14:34:17.507  INFO 200540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 14:34:17.507  INFO 200540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2022-12-14 14:34:18.448  INFO 200540 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 14:34:18.502  INFO 200540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 14:34:18.507  INFO 200540 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 14:34:18.529  INFO 200540 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 34084]
+2022-12-14 14:34:18.531  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.531  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.532  INFO 200540 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:34:18.588  INFO 200540 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 4.471 seconds (JVM running for 4.704)
+2022-12-14 14:34:37.594  INFO 200540 --- [http-nio-9006-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 14:34:37.595  INFO 200540 --- [http-nio-9006-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 14:34:37.596  INFO 200540 --- [http-nio-9006-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 14:34:42.342  INFO 200540 --- [http-nio-9006-exec-2] c.s.e.s.EmailHotelPropertyServiceImpl    : From EmailHotelPropertyServiceImpl--> In newHotelMail method: email sent successfully...
+2022-12-14 14:38:40.015  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.016  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.016  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.017  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.017  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.018  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.018  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.018  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.019  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 14:38:40.612  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.612  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.612  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.612  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.613  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.613  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.616  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.616  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.617  INFO 200540 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 14:38:40.629  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:40.630  INFO 200540 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 14:38:44.258  INFO 201483 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 14:38:45.301  INFO 201483 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:38:45.302  INFO 201483 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 14:38:45.316  INFO 201483 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 14:38:45.328  INFO 201483 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 14:38:45.329  INFO 201483 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 14:38:45.920  INFO 201483 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 14:38:46.106  INFO 201483 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 14:38:46.114  INFO 201483 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 14:38:46.115  INFO 201483 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 14:38:46.206  INFO 201483 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 14:38:46.207  INFO 201483 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2022-12-14 14:38:47.495  INFO 201483 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 14:38:47.577  INFO 201483 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 14:38:47.597  INFO 201483 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 14:38:47.650  INFO 201483 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 36132]
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.654  INFO 201483 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 14:38:47.729  INFO 201483 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 5.379 seconds (JVM running for 5.64)
+2022-12-14 14:39:08.572  INFO 201483 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 14:39:08.572  INFO 201483 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 14:39:08.573  INFO 201483 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 14:39:13.750  INFO 201483 --- [http-nio-9006-exec-1] c.s.e.s.EmailHotelPropertyServiceImpl    : From EmailHotelPropertyServiceImpl--> In newHotelMail method: email sent successfully...
+2022-12-14 15:13:30.851  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.852  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.852  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.853  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.853  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.854  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.854  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.854  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:30.854  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 15:13:31.028  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.028  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.028  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.029  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.029  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.050  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.050  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.064  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.064  INFO 201483 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:31.074  INFO 201483 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 15:13:34.644  INFO 207051 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 15:13:37.261  INFO 207051 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 15:13:37.262  INFO 207051 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 15:13:37.272  INFO 207051 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 15:13:37.279  INFO 207051 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 15:13:37.280  INFO 207051 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 15:13:37.760  INFO 207051 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 15:13:37.925  INFO 207051 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 15:13:37.933  INFO 207051 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 15:13:37.933  INFO 207051 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 15:13:38.015  INFO 207051 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 15:13:38.015  INFO 207051 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2022-12-14 15:13:38.982  INFO 207051 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 15:13:39.025  INFO 207051 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 15:13:40.027  INFO 207051 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-12-14 15:13:40.031  INFO 207051 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 15:13:40.070  INFO 207051 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@3c488b34 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 56058]
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.072  INFO 207051 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 15:13:40.128  INFO 207051 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 7.218 seconds (JVM running for 7.483)
+2022-12-14 15:15:39.668  INFO 207051 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 15:15:39.669  INFO 207051 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 15:15:39.670  INFO 207051 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 15:15:45.513  INFO 207051 --- [http-nio-9006-exec-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In bookingMail method: email sent successfully...
+2022-12-14 15:26:59.340  INFO 207051 --- [http-nio-9006-exec-3] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In welcome mail method: email sent successfully...
+2022-12-14 15:31:07.994  INFO 207051 --- [http-nio-9006-exec-5] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In otpMail method: email sent successfully...
+2022-12-14 17:01:14.644  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.644  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.645  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.645  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.645  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.646  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.646  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.646  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.647  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:01:14.905  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.906  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.906  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.906  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.906  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.906  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.920  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.920  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.958  INFO 207051 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:01:14.969  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:14.970  INFO 207051 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:01:18.805  INFO 222450 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 17:01:19.777  INFO 222450 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:01:19.778  INFO 222450 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 17:01:19.792  INFO 222450 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 17:01:19.803  INFO 222450 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 17:01:19.803  INFO 222450 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:01:20.433  INFO 222450 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 17:01:20.744  INFO 222450 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 17:01:20.749  INFO 222450 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 17:01:20.749  INFO 222450 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 17:01:20.836  INFO 222450 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 17:01:20.836  INFO 222450 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1033 ms
+2022-12-14 17:01:21.951  INFO 222450 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 17:01:21.997  INFO 222450 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 17:01:22.002  INFO 222450 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 17:01:22.026  INFO 222450 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 54182]
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.029  INFO 222450 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:01:22.099  INFO 222450 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 5.201 seconds (JVM running for 5.481)
+2022-12-14 17:04:35.726  INFO 222450 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 17:04:35.727  INFO 222450 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 17:04:35.728  INFO 222450 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 17:04:41.179  INFO 222450 --- [http-nio-9006-exec-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In otpMail method: email sent successfully...
+2022-12-14 17:13:39.745  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.745  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.746  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.746  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.747  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.747  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.747  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.748  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:39.748  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.180  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.188  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.194  INFO 222450 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:13:40.222  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.223  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.223  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.223  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.223  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.223  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.224  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.224  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:40.224  INFO 222450 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:13:43.843  INFO 224316 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 17:13:44.726  INFO 224316 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:13:44.727  INFO 224316 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 17:13:44.736  INFO 224316 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 17:13:44.745  INFO 224316 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 17:13:44.745  INFO 224316 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:13:45.284  INFO 224316 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 17:13:45.423  INFO 224316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 17:13:45.429  INFO 224316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 17:13:45.429  INFO 224316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 17:13:45.494  INFO 224316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 17:13:45.494  INFO 224316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 749 ms
+2022-12-14 17:13:46.410  INFO 224316 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 17:13:46.462  INFO 224316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 17:13:46.484  INFO 224316 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 17:13:46.507  INFO 224316 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 32778]
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.510  INFO 224316 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:13:46.565  INFO 224316 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 4.524 seconds (JVM running for 4.762)
+2022-12-14 17:14:53.829  INFO 224316 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 17:14:53.829  INFO 224316 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 17:14:53.830  INFO 224316 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 17:14:59.061  INFO 224316 --- [http-nio-9006-exec-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In otpMail method: email sent successfully...
+2022-12-14 17:18:30.524  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.525  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.525  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.526  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.526  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.526  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.527  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.527  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.527  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.593  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.605  INFO 224316 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-12-14 17:18:30.613  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.613  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.613  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.613  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.614  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.614  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.614  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.614  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:30.614  INFO 224316 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-12-14 17:18:33.980  INFO 225491 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-12-14 17:18:34.919  INFO 225491 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:18:34.920  INFO 225491 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/swastikashanker/EaseMyStayConfig.git/email-service.properties'}]
+2022-12-14 17:18:34.931  INFO 225491 --- [main] c.s.e.EmailServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-12-14 17:18:34.938  INFO 225491 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2022-12-14 17:18:34.938  INFO 225491 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=email-service, profiles=[default], label=null, version=a8e17326a1dba147684e8f0dfe53ec3c8f4c9360, state=null
+2022-12-14 17:18:35.460  INFO 225491 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f46e6e9-5d8c-3c38-abdb-37015e83b6a4
+2022-12-14 17:18:35.616  INFO 225491 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9006 (http)
+2022-12-14 17:18:35.622  INFO 225491 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-14 17:18:35.622  INFO 225491 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-14 17:18:35.692  INFO 225491 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-14 17:18:35.692  INFO 225491 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 754 ms
+2022-12-14 17:18:36.590  INFO 225491 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-12-14 17:18:36.635  INFO 225491 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9006 (http) with context path ''
+2022-12-14 17:18:36.641  INFO 225491 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-12-14 17:18:36.671  INFO 225491 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#660b1a9d:0/SimpleConnection@4beae1e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 35680]
+2022-12-14 17:18:36.675  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_emailer_reset_success) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_booking) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_cancellation) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_new_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_update_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.676  INFO 225491 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue_to_get_delete_hotel) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-12-14 17:18:36.770  INFO 225491 --- [main] c.s.e.EmailServiceApplication            : Started EmailServiceApplication in 4.431 seconds (JVM running for 4.681)
+2022-12-14 17:19:04.113  INFO 225491 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-14 17:19:04.114  INFO 225491 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-14 17:19:04.115  INFO 225491 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-14 17:19:09.601  INFO 225491 --- [http-nio-9006-exec-1] c.s.e.service.EmailServiceImpl           : From EmailServiceImpl--> In otpMail method: email sent successfully...
+>>>>>>> 6479b18 (html fixes in emails)

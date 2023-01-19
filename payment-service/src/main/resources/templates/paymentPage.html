@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Page</title>
+    <style>
+        .divStyle{
+            border: 1px solid black;
+            text-align: center;
+            width: 30%;
+            margin: auto;
+            border-radius: 3px;
+        }
+        .heading{
+            text-align: center;
+        }
+        .form{
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+<h1 class="heading">Pay Here</h1>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<div class="divStyle">
+<form class="form" action="/payment/success" method="POST">
+    <div>
+        <div class="col-md-6"><label>Customer Id &nbsp;</label></div>
+        <div class="col-md-6"><input type="text" id="customerId" name="razorpay_customer_id" readonly><br><br></div>
+    </div>
+    <div>
+        <div class="col-md-6"><label>Payment Id &nbsp;</label></div>
+        <div class="col-md-6"><input type="text" id="paymentId" name="razorpay_payment_id" readonly><br><br></div>
+    </div>
+    <div>
+        <div class="col-md-6"><label>Order Id &nbsp;</label></div>
+        <div class="col-md-6"><input type="text" id="orderId" name="razorpay_order_id" readonly><br><br></div>
+    </div>
+    <div>
+        <div class="col-md-6"><label>Payment Signature &nbsp;</label></div>
+        <div class="col-md-6"><input type="text" id="paymentSignature" name="razorpay_signature" readonly><br><br></div>
+    </div>
+    <div>
+    <div class="col-md-6"><button class="btn btn-primary" id="rzp-button1">Pay</button></div>
+    <div ><button class="btn btn-success" type = "submit" id ="submitData" disabled>Submit Data</button></div>
+    </div>
+    <br>
+    <script>
+        var responseObject = {};
+        var options = {
+            "key": "[[${razorpayKey}]]",
+            "currency": "INR",
+            "name": "EaseMyStay",
+            "description": "Hotel Booking Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": "[[${orderId}]]",
+            "handler": function (response) {
+                responseObject = {
+                    a: response.razorpay_payment_id,
+                    b:response.razorpay_order_id,
+                    c:response.razorpay_signature
+                }
+                document.getElementById("paymentId").value = responseObject.a;
+                document.getElementById("orderId").value = responseObject.b;
+                document.getElementById("paymentSignature").value = responseObject.c;
+                document.getElementById("customerId").value = "[[${customerId}]]";
+                document.getElementById("submitData").disabled = false;
+                document.getElementById("rzp-button1").disabled = true;
+            },
+            "prefill": {
+                "name": "[[${name}]]",
+                "email": "[[${email}]]",
+                "contact": "[[${phoneNumber}]]"
+            },
+            "notes": {
+                "address": "EaseMyStay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</form>
+</div>
+</body>
+</html>

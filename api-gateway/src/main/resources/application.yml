@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+#use while running from local
+eureka:
+  instance:
+    hostname: localhost
+#use while running from docker
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://eureka-server:8761/eureka/
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-authentication-service
+#          uri: http://user-profile-service:9002 #use this while running in docker
+          uri: lb://user-authentication-service #use this while running in local
+          predicates:
+            - Path=/authenticate/**,/test/**
+
+        - id: user-profile-service
+          uri: lb://user-profile-service #use this while running in local
+#          uri: http://user-profile-service:9001 #use this while running in docker
+          predicates:
+            - Path=/verification/**,/registration/**
+
+        - id: hotel-property-service
+#          uri: http://user-profile-service:9003 #use this while running in docker
+          uri: lb://hotel-property-service #use this while running in docker
+          predicates:
+            - Path=/hotel/**,/address/**
+
+        - id: hotel-booking-service
+          uri: lb://hotel-booking-service #use this while running in local
+#          uri: http://user-profile-service:9004 #use this while running in docker
+          predicates:
+            - Path=/booking/**
+
+        - id: payment-service
+          uri: lb://payment-service #use this while running in local
+#          uri: http://user-profile-service:9005 #use this while running in docker
+          predicates:
+            - Path=/payment/**
+
+        - id: chat-service
+#          uri: http://user-profile-service:9008 #use this while running in docker
+          uri: lb://chat-service #use this while running in local
+          predicates:
+            - Path=/chats/**
+
+        - id: feedback-service
+#          uri: http://user-profile-service:9009 #use this while running in docker
+          uri: lb://feedback-service #use this while running in local
+          predicates:
+            - Path=/feedback/**

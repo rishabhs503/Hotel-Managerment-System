@@ -1,0 +1,211 @@
+version: '3'
+
+services:
+
+  rabbitmq:
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - giftnetwork
+
+  config-server:
+    container_name: config-server
+    build: config-server/
+    hostname: localhost
+    ports:
+      - 8888:8888
+    restart: always
+    networks:
+      - giftnetwork
+
+
+  api-gateway:
+    container_name: api-gateway
+    build: api-gateway/
+    hostname: localhost
+    depends_on:
+      - eureka-server
+    ports:
+      - 8080:8080
+    restart: always
+    networks:
+      - giftnetwork
+
+
+  eureka-server:
+    container_name: eureka-server
+    build: eureka-server/
+    restart: always
+    networks:
+      - giftnetwork
+    hostname: localhost
+    ports:
+      - 8761:8761
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-container
+    restart: always
+    networks:
+      - giftnetwork
+    hostname: localhost
+    ports:
+      - 27017:27017
+
+  postgresql:
+    image: postgres
+    container_name: postgresql
+    restart: always
+    networks:
+      - giftnetwork
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=EaseMyStay
+      - POSTGRES_PASSWORD=root
+
+  user-profile-service:
+    container_name: user-profile-service
+    build: user-profile-service/
+    hostname: localhost
+    ports:
+      - 9001:9001
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+      - mongodb
+    restart: always
+    networks:
+      - giftnetwork
+
+  user-authentication-service:
+    container_name: user-authentication-service
+    build: user-authentication-service/
+    hostname: localhost
+    ports:
+      - 9002:9002
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+      - mongodb
+      - postgresql
+    restart: always
+    networks:
+      - giftnetwork
+
+  hotel-property-service:
+    container_name: hotel-property-service
+    build: hotel-property-service/
+    hostname: localhost
+    ports:
+      - 9003:9003
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+      - mongodb
+    restart: always
+    networks:
+      - giftnetwork
+
+  hotel-booking-service:
+    container_name: hotel-booking-service
+    build: hotel-booking-service/
+    hostname: localhost
+    ports:
+      - 9004:9004
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+      - mongodb
+    restart: always
+    networks:
+      - giftnetwork
+
+  payment-service:
+    container_name: payment-service
+    build: payment-service/
+    hostname: localhost
+    ports:
+      - 9005:9005
+    depends_on:
+      - eureka-server
+      - config-server
+      - mongodb
+      - rabbitmq
+    restart: always
+    networks:
+      - giftnetwork
+
+  email-service:
+    container_name: email-service
+    build: email-service/
+    hostname: localhost
+    ports:
+      - 9006:9006
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+    restart: always
+    networks:
+      - giftnetwork
+
+  chat-service:
+    container_name: chat-service
+    build: chat-service/
+    hostname: localhost
+    ports:
+      - 9008:9008
+    depends_on:
+      - eureka-server
+      - config-server
+      - mongodb
+      - rabbitmq
+    restart: always
+    networks:
+      - giftnetwork
+
+  sms-service:
+    container_name: sms-service
+    build: sms-service/
+    hostname: localhost
+    ports:
+      - 9007:9007
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+    restart: always
+    networks:
+      - giftnetwork
+
+
+  feedback-service:
+    container_name: feedback-service
+    build: feedback-service/
+    hostname: localhost
+    ports:
+      - 9009:9009
+    depends_on:
+      - eureka-server
+      - config-server
+      - mongodb
+      - rabbitmq
+    restart: always
+    networks:
+      - giftnetwork
+
+
+networks:
+  giftnetwork:
+    driver: bridge
